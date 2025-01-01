@@ -1,0 +1,25 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+fs_permissions = [
+    { access = "read", path = "./broadcast" },
+    { access = "read", path = "./reports" },
+]
+
+remappings = [
+    '@chainlink/contracts=lib/chainlink-brownie-contracts/contracts',
+    '@openzeppelin/contracts=lib/openzeppelin-contracts/contracts',
+    '@uniswap/contracts=lib/v3-periphery/contracts',
+    '@uniswap/v3-core=lib/v3-core',
+    '@solmate=lib/solmate/src',
+]
+
+gas_reports = ["CryptoCostAverage"]
+
+[rpc_endpoints]
+arbitrum = "https://arb-mainnet.g.alchemy.com/v2/qsvFzQM1p5j57CKLsxmepjUJTYJREPkV"
+
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
